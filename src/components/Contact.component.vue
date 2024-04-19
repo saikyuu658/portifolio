@@ -1,0 +1,150 @@
+<script lang="ts">
+    export default {
+        data() {
+            return {
+                newMessage: {
+                    email: '',
+                    message: ''
+                },
+            }
+        },
+        methods: {
+            sendForm(){
+                console.log(this.newMessage);
+            }
+        },
+        
+    }
+</script>
+
+<template >
+    <div class="body">
+        <h3>Contato</h3>
+        <div class="content">
+            <div class="contat">
+                <span class="material-symbols-outlined">
+                    mail
+                </span>
+                davidpontes461@gmail.com
+            </div>
+
+            <div class="contat">
+                <span class="material-symbols-outlined">
+                    call
+                </span>
+                +55 (88) 99456-3932
+            </div>
+
+            <div class="contat">
+                <span class="material-symbols-outlined">
+                    pin_drop
+                </span>
+                Massapê, Ceará, Brasil
+            </div>
+
+            
+        </div>
+        <form class="form-contat" @submit.prevent="sendForm()">
+            <label>Deixe sua mensagem!</label>
+            <input type="email" v-model="newMessage.email" class="input-control" placeholder="Digite seu email" >
+            <input v-model="newMessage.message"  class="input-control"  placeholder="Sua mensagem" >
+           
+
+            <button class="leave-message">
+                Enviar
+            </button>
+        </form>
+    </div>
+    
+</template>
+
+<style scoped>
+
+    .textarea-input-control{
+        resize: none;
+        text-align: start !important;
+    }
+    .body{
+        padding: 5vw;
+        background-color: #313131;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        margin-block: 30px;
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    .content .contat{
+        white-space: nowrap;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .form-contat{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-control{
+        text-align: center;
+        margin: 10px 5px;
+        width: 500px;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+    }
+
+    .input-control:focus{
+        outline: none;
+    }
+
+    .leave-message{
+        height: 40px;
+        width: fit-content;
+        padding-inline: 50px;
+        border-radius: 3px;
+        border: none;
+        background-color: var(--main);
+    }
+
+    .leave-message:hover{
+        cursor: pointer;
+        background-color: #08f57f;
+        box-shadow: 0 0 5px #17df7b;
+    }
+
+    @media (max-width: 1080px) {
+        
+        h3 {
+            font-size: calc(3vw + 10px)
+        }
+        .content{
+            font-size: 2vw;
+            width: 100%;
+        }
+    }
+
+
+    @media (max-width: 600px) {
+        
+        
+        .content{
+            flex-direction: column;
+            font-size: 11px;
+            width: 100%;
+        }
+
+        .input-control{
+            width: 80vw;
+        }
+    }
+
+</style>
