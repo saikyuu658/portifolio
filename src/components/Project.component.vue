@@ -1,9 +1,18 @@
+<script lang="ts">
+
+
+
+</script>
 <template>
-    <section class="body">
+    <ModalComponent
+        v-show="modalShow"
+        @close="()=>{modalShow = false}"
+    ></ModalComponent>
+    <section class="body" id="project">
         <h3>Meus Projetos</h3>
         <div class="content">
             <div class="card-project">
-                <img src="https://control-webpanel.com/wp-content/uploads/2019/03/slider-user-dashboard.jpg" height="100%" alt="">
+                <img src="../assets/painel/img2.png"  alt="">
                 <div class="messagem">
                     <p class="description">
                         <span class="title">Chrunch Control</span>
@@ -11,12 +20,11 @@
                             Gestão de igreja, financeiro, débitos, membros, agenda
                         </div>
                     </p>
-                    <button class="see-more">Ver</button>
                 </div>
             </div>
             
             <div class="card-project">
-                <img src="https://control-webpanel.com/wp-content/uploads/2019/03/slider-user-dashboard.jpg" height="100%" alt="">
+                <img src="../assets/painel/img3.png"  alt="">
                 <div class="messagem">
                     <p class="description">
                         <span class="title">Painel de Senhas</span>
@@ -24,12 +32,11 @@
                             Criação de senhas por setor, multiplos guichê, painel sonoro, administrativo de configuração de estilo
                         </div>
                     </p>
-                    <button class="see-more">Ver</button>
                 </div>
             </div>
 
             <div class="card-project">
-                <img src="https://control-webpanel.com/wp-content/uploads/2019/03/slider-user-dashboard.jpg" height="100%" alt="">
+                <img src="../assets/painel/img1.png"  alt="">
                 <div class="messagem">
                     <p class="description">
                         <span class="title">Clinica Escola Odontologia</span>
@@ -37,12 +44,11 @@
                             Cadastro de triagem, controle de usuário, autenticação JWT
                         </div>
                     </p>
-                    <button class="see-more">Ver</button>
                 </div>
             </div>
 
             <div class="card-project">
-                <img src="https://control-webpanel.com/wp-content/uploads/2019/03/slider-user-dashboard.jpg" height="100%" alt="">
+                <img src="../assets/painel/img3.png"  alt="">
                 <div class="messagem">
                     <p class="description">
                         <span class="title">Revisaço</span>
@@ -50,11 +56,11 @@
                             Aplicativo para auxilio de revisão, AdMob, SqLite
                         </div>
                     </p>
-                    <button class="see-more">Ver</button>
                 </div>
             </div>
             
         </div>
+
     </section>
 </template>
 <style scoped>
@@ -88,39 +94,30 @@
         text-align: center;
     }
     .card-project{
-       
-
+        background-color: #353636b2;
+        border-radius: 10px;
+        border: solid 1px #ffffff54;
         position: relative;
         overflow: hidden;
     }
     .card-project img{
         width: 100%;
-        height: 100%;
     }
     
-
-    .card-project:hover > .messagem {
-        transform: translateY(0);
-    }
-
     .card-project .messagem {
-        transform: translateY(100%);
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         transition: all 0.5s;
-        background-color: #353636b2;
         font-size: 11px;
         color: white;
     }
 
     .card-project .messagem .title{
         display: block;
+        border-bottom: #08f57f solid 1px;
+        margin-bottom: 10px;
         text-align: center;
         font-weight: 600;
         font-size: 18px;

@@ -9,7 +9,11 @@
                         Desenvolvedor JavaScript full Stack
                     </p>
                 </div>
-                <button class="send-mesage">
+                <button class="send-mesage" 
+                    v-on:click="()=>{
+                        window.open('https://api.whatsapp.com/send?phone=5588994563932')
+                    }"
+                >
                     <span>
                         Enviar Mensagem!
                     </span>

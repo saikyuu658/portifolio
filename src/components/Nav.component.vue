@@ -11,36 +11,32 @@
     <nav>
         <ul>
             <li>
-                <a href="">
+                <a href="#about_me">
                     <span class="material-symbols-outlined">
                         person
                     </span>
                     Sobre mim
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <span class="material-symbols-outlined">
-                        phone
-                    </span>
-                        Contato
-                </a>
-            </li>
 
-            <li >
-                <a href="">
+            <li>
+                <a href="#tools">
                     <span class="material-symbols-outlined">
-                        description
+                        handyman
                     </span>
-                    Resumo
+                        Ferramentas
                 </a>
             </li>
 
             <li>
-                <button class="call-me">
-                    Entre em contato
-                </button>
+                <a href="#project">
+                    <span class="material-symbols-outlined">
+                        apps
+                    </span>
+                        Projetos
+                </a>
             </li>
+
         </ul>
     </nav>
 </template>

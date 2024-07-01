@@ -6,4 +6,11 @@ import App from './App.vue'
 import PrimeVue from 'primevue/config';
 import ToastService from 'primevue/toastservice'
 
-createApp(App).use(PrimeVue).use(ToastService).mount('#app')
+
+
+let app = createApp(App) 
+    .use(PrimeVue)
+    .use(ToastService)
+    
+app.config.globalProperties.window = window;
+app.mount('#app');

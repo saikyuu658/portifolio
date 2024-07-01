@@ -1,6 +1,6 @@
 
 <template>
-    <div class="body">
+    <div class="body"  id="about_me">
         <div class="content">
             <h3>Sobre Mim</h3>
             <p class="description">
@@ -13,7 +13,7 @@
             <div>
                 <p></p>
             </div>
-            <a href="../assets/newCVDavid.pdf" target="_blank" download="newCVDavid.pdf" class="download-cv" v-on:click="">
+            <a href="/newCVDavid.pdf" target="_blank" download="newCVDavid.pdf" class="download-cv" v-on:click="">
                 Baixar CV 
                 <span class="material-symbols-outlined">
                     download

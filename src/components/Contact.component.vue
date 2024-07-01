@@ -1,50 +1,42 @@
-<script lang="ts">
-    export default {
-        data() {
-            return {
-                newMessage: {
-                    email: '',
-                    message: ''
-                },
-            }
-        },
-        methods: {
-            sendForm(){
-                console.log(this.newMessage);
-            }
-        },
-        
-    }
-</script>
+
 
 <template >
     <div class="body">
         <h3>Contato</h3>
         <div class="content">
-            <div class="contat">
+            <div class="contat" 
+            v-on:click="()=>{
+            }"
+            >
                 <span class="material-symbols-outlined">
                     mail
                 </span>
                 davidpontes461@gmail.com
             </div>
 
-            <div class="contat">
+            <div class="contat" v-on:click="()=>{
+                window.open('https://api.whatsapp.com/send?phone=5588994563932')
+
+            }">
                 <span class="material-symbols-outlined">
                     call
                 </span>
                 +55 (88) 99456-3932
             </div>
 
-            <div class="contat">
+            <div class="contat" v-on:click="()=>{
+                window.open('https://www.google.com/maps/place/Frecheirinha,+CE,+62340-000/data=!4m2!3m1!1s0x7eb31953d42c2f7:0xf7af08ffe3d16851?sa=X&ved=1t:242&ictx=111')
+            }">
                 <span class="material-symbols-outlined">
                     pin_drop
                 </span>
-                Massapê, Ceará, Brasil
+                Frecheirinha, Ceará, Brasil
             </div>
 
             
         </div>
-        <form class="form-contat" @submit.prevent="sendForm()">
+        
+        <!-- <form class="form-contat" @submit.prevent="sendForm()">
             <label>Deixe sua mensagem!</label>
             <input type="email" v-model="newMessage.email" class="input-control" placeholder="Digite seu email" >
             <input v-model="newMessage.message"  class="input-control"  placeholder="Sua mensagem" >
@@ -53,7 +45,7 @@
             <button class="leave-message">
                 Enviar
             </button>
-        </form>
+        </form> -->
     </div>
     
 </template>
@@ -81,6 +73,7 @@
     }
 
     .content .contat{
+        cursor: pointer;
         white-space: nowrap;
         display: flex;
         gap: 5px;
