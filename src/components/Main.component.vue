@@ -10,9 +10,7 @@
                     </p>
                 </div>
                 <button class="send-mesage" 
-                    v-on:click="()=>{
-                        window.open('https://api.whatsapp.com/send?phone=5588994563932')
-                    }"
+                    v-on:click="open"
                 >
                     <span>
                         Enviar Mensagem!
@@ -22,6 +20,13 @@
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+    
+    const open=()=>{
+        window.open('https://api.whatsapp.com/send?phone=5588994563932')
+    }
+</script>
 
 <style scoped>
     .body{

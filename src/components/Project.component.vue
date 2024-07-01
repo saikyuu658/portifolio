@@ -1,13 +1,6 @@
-<script lang="ts">
 
-
-
-</script>
 <template>
-    <ModalComponent
-        v-show="modalShow"
-        @close="()=>{modalShow = false}"
-    ></ModalComponent>
+    
     <section class="body" id="project">
         <h3>Meus Projetos</h3>
         <div class="content">
